@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Material Symbols Rounded";
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/fonts/Material_Icons_Rounded.woff2") format("woff2");
+}
+.material-symbols-rounded {
+  font-family: "Material Symbols Rounded";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-font-feature-settings: "liga";
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(assets/fonts/FiraSans-Regular.ttf);
+}
+@font-face {
+  font-family: "Fira Sans";
+  src: url(assets/fonts/FiraSans-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Fira Sans";
+  src: url(assets/fonts/FiraSans-BoldItalic.ttf);
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Fira Sans";
+  src: url(assets/fonts/FiraSans-Italic.ttf);
+  font-style: italic;
+}
+body {
+  font-family: "Fira Sans";
+  margin: 0;
+  font-size: 12pt;
+  background: #f5f1e9;
+  color: #222;
+}
+
+main {
+  padding: 1em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.step {
+  background: white;
+  padding: 1em;
+  border-radius: 10px;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: 2em 1fr;
+  gap: 1em;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+.step__number {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  color: #005437;
+}
+.step__description p {
+  margin: 0;
+  margin-top: 0.5em;
+}
+
+.button {
+  font-weight: bold;
+  display: inline-block;
+  background: #e6eeeb;
+  text-decoration: none;
+  color: #005437;
+  padding: 0.5em 0.7em;
+  border-radius: 5px;
+}
+.button--small {
+  font-size: 0.9em;
+}
+.button--icon {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.7em;
+  font-weight: normal;
+}
+.button--paypal {
+  background: #001C64;
+  color: white;
+}
+.button--paypal-secondary {
+  background: #e6e8f0;
+  color: #001C64;
+  font-weight: normal;
+}
+
+.button-bar {
+  margin-top: 1em;
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+
+h1 {
+  color: #005437;
+}
+
+a {
+  color: #005437;
+  font-weight: bold;
+}
+
+input[type=range] {
+  width: 100%;
+  margin: 1em 0 1em 0;
+  accent-color: #005437;
+  /*-webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+
+
+  &::-webkit-slider-runnable-track,
+  &::-moz-range-track {
+      background: mix($primary-color, white, 10%);
+      height: 0.5rem;
+      border-radius: .5rem;
+  }
+
+  &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      margin-top: -12px;
+      background-color: $primary-color;
+      height: 2rem;
+      width: 1rem;
+      border-radius: 10px;
+  }
+
+  &::-moz-range-thumb {
+      border: none;
+      border-radius: 0;
+      background-color: $primary-color;
+      height: 1rem;
+      width: 1rem;
+      border-radius: 10px;
+  }*/
+}
+
+option {
+  padding: 0;
+}
+
+option.recommended {
+  font-weight: bold;
+  color: #005437;
+}
+
+datalist {
+  color: #555;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: right;
+  width: 100%;
+  text-orientation: mixed;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyDrive Downloader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>StudyDrive Downloader</h1>
+        <p>StudyDrive hat es zu einem Premium-Feature gemacht, von Nutzern erstellte Inhalte herunterzuladen. Mit dieser Erweiterung könnt ihr Inhalte kostenlos herunterladen.</p>
+
+        <div class="step">
+            <div class="step__number">1.</div>
+            <div class="step__description">
+                <b>Violentmonkey installieren</b>
+                <p>Installiere die Erweiterung <i>Violentmonkey</i> in deinem Browser.</p>
+                
+                <div class="button-bar">
+                    <a class="button button--icon button--small" href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag?pli=1" target="_blank">
+                        <div class="button__icon">
+                            <i class="material-symbols-rounded">install_desktop</i>
+                        </div>
+                        <div class="button__label">
+                            Violentmonkey<br>
+                            für Chrome
+                        </div>
+                    </a>
+    
+                    <a class="button button--icon button--small" href="https://addons.mozilla.org/de/firefox/addon/violentmonkey/" target="_blank">
+                        <div class="button__icon">
+                            <i class="material-symbols-rounded">install_desktop</i>
+                        </div>
+                        <div class="button__label">
+                            Violentmonkey<br>
+                            für Firefox
+                        </div>
+                    </a>    
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step__number">2.</div>
+            <div class="step__description">
+                <b>Nutzerskript installieren</b>
+                <p>Öffne <a href="https://greasyfork.org/de/scripts/480565-file-downloader-for-studydrive" target="_blank">diesen Link</a> und installiere das Skript.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step__number">3.</div>
+            <div class="step__description">
+                <b>Pay what you want</b>
+                <p>Ich bin selber Student und würde mich sehr über eine kleine Spende freuen, ihr spart euch ja den Premium-Beitrag, also mindestens 3,99 € pro Monat 😉</p>
+                <datalist id="markers">
+                    <option value="1" label="1 €"></option>
+                    <option value="2" label="2 €"></option>
+                    <option value="3"></option>
+                    <option class="recommended" value="4" label="4 €"></option>
+                    <option value="5"></option>
+                    <option value="6" label="6 €"></option>
+                    <option value="7"></option>
+                    <option value="8" label="8 €"></option>
+                    <option value="9"></option>
+                    <option value="10" label="10 €"></option>
+                </datalist>
+
+                <input type="range" name="" id="amount-slider" min="1" max="10" value="4" list="markers">
+
+                <div class="button-bar">
+                    <a href="" class="button button--paypal" id="paypal-button" target="_blank">
+                        PayPal
+                    </a>
+
+                    <a href="https://paypal.me/soenkejnssn" class="button button--paypal-secondary" id="paypal-button" target="_blank">
+                        Wunschbetrag spenden
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step__number">4.</div>
+            <div class="step__description">
+                <b>Dateien herunterladen</b>
+                <p>Nun solltest du Dateien wieder ohne Premium herunterladen können. Klicke dafür einfach auf den Download-Knopf.</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let paypalButton = document.getElementById("paypal-button");
+        let amountSlider = document.getElementById("amount-slider");
+
+        function setAmount(amount) {
+            paypalButton.href = `https://paypal.me/soenkejnssn/${amount}`;
+            paypalButton.textContent = `${amount} € spenden`;
+        }
+
+        setAmount(4);
+
+        amountSlider.addEventListener("input", (event) => {
+            setAmount(event.target.value)
+        });
+    </script>
+</body>
+</html>
